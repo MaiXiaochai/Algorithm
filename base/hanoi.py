@@ -12,7 +12,7 @@
 times = 0
 
 
-def hanoi(n, a, b, c):
+def hanoi(number, a, b, c):
     """
         n 多少个盘子
         a, b, c 均为柱子名称
@@ -21,10 +21,10 @@ def hanoi(n, a, b, c):
         假设移动 x盘子需要 h(x)步，分三步
     """
 
-    if n > 0:
+    if number > 0:
         # 1. 将 n-1个盘子看为一个整体，从 a 经过 c 移动到 b
         # 公式：h(n-1)
-        hanoi(n - 1, a, c, b)
+        hanoi(number - 1, a, c, b)
 
         # 2. 将第 n个盘子移动到 c
         # 公式：+1
@@ -32,7 +32,7 @@ def hanoi(n, a, b, c):
 
         # 3. 将 n-1个盘子看为一个整体，从 b 经过 a 移动到 c
         # 公式: h(n-1)
-        hanoi(n - 1, b, a, c)
+        hanoi(number - 1, b, a, c)
 
     # 所以，h(x) = 2h(x-1) + 1
 
