@@ -17,7 +17,7 @@
             + [选择排序](base/select_sort.py)
             + [插入排序](base/insert_sort.py)
         + 高效排序
-            + 快速排序
+            + [快速排序](base/quick_sort.py)
             + 堆排序
             + 归并排序
         + 其它排序
