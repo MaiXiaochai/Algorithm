@@ -61,7 +61,8 @@ def quick_sort(data: list, left: int, right: int):
 
 
 def demo():
-    li = [5, 7, 4, 6, 3, 1, 2, 9, 8]
+    # li = [5, 7, 4, 6, 3, 1, 2, 9, 8]
+    li = [9, 8, 7, 6, 5, 4, 3, 2, 1]
     quick_sort(li, 0, len(li) - 1)
     print(li)
 
