@@ -96,6 +96,23 @@ def partition_pro(data, left, right):
     """
         归位函数-快速排序用
     """
+    pass
+
+
+def partition_plus(arr, low, high):
+    i = (low - 1)  # 最小元素索引
+    pivot = arr[high]
+
+    for j in range(low, high):
+
+        # 当前元素小于或等于 pivot
+        if arr[j] <= pivot:
+            i = i + 1
+            arr[i], arr[j] = arr[j], arr[i]
+
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+
+    return i + 1
 
 
 def quick_sort(data, left, right):
@@ -103,11 +120,9 @@ def quick_sort(data, left, right):
         快速排序
     """
     if left < right:
-        mid = partition(data, left, right)
+        mid = partition_plus(data, left, right)
         quick_sort(data, left, mid - 1)
         quick_sort(data, mid + 1, right)
-
-    print(data)
 
 
 def demo_low(lis):
@@ -122,7 +137,13 @@ def demo_low(lis):
 
 if __name__ == '__main__':
     # will_sort = [1, 9, 2, 8, 3, 7, 4, 6, 5]
-    will_sort = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+    data = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+    data_len = len(data)
 
-    # demo_low(will_sort)
-    quick_sort(will_sort, 0, len(will_sort) - 1)
+    # 低效排序: 冒泡、选择、插入
+    # demo_low(data)
+
+    # 快速排序
+    q_data = d_copy(data)
+    quick_sort(q_data, 0, data_len - 1)
+    print(f"快速排序: {q_data}")
