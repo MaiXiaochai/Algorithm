@@ -3,43 +3,44 @@
 一些算法练习 `Python`版
 
 ## 1.基本算法
+1. ### 引述
+    + [汉诺塔](base/hanoi.py)
+    + [查找](base/search.py)
+        + [顺序查找](base/search.py)
+        + [二分查找](base/search.py)
 
-+ [汉诺塔](base/hanoi.py)
-+ [查找](base/search.py)
-    + 顺序查找
-    + 二分查找
-+ ### 排序
+2. ### 排序
     + #### 简述
         + 排序：将一组”无序“的记录序列调整为“有序”的记录的序列
         + 列表排序：无序列表变为有序列表
-        + 低效排序
-            + [冒泡排序](base/bubble_sort.py)
-            + [选择排序](base/select_sort.py)
-            + [插入排序](base/insert_sort.py)
-        + 高效排序
-            + [快速排序](base/quick_sort.py)
-            + 堆排序
-            + 归并排序
-        + 其它排序
-            + 希尔排序
-            + 计数排序
-            + 基数排序
+        + ##### 低效排序
+            1. [冒泡排序](base/bubble_sort.py)
+            2. [选择排序](base/select_sort.py)
+            3. [插入排序](base/insert_sort.py)
+        + ##### 高效排序
+            1. [快速排序](base/quick_sort.py)
+            2. [堆排序](base/heap_sort.py)
+            3. 归并排序
+        + ##### 其它排序
+            1. 希尔排序
+            2. 计数排序
+            3. 基数排序
     + #### 低效排序
-        + [冒泡排序](base/bubble_sort.py)
+        + ##### [冒泡排序](base/bubble_sort.py)
             + 概念：列表每两个相邻的数，如果前面(索引序号小)的比后面的大，则交换这两个数
             + 一趟排序完成后，则无序区减少一个数，有序区增加一个数
             + 时间复杂度: O(n<sup>2</sup>)
 
-        + [选择排序](base/select_sort.py)
+        + ##### [选择排序](base/select_sort.py)
             + 概念：每次将无序区中最大的值取出来，放到有序区的最右侧
             + 时间复杂度: O(n<sup>2</sup>)
 
-        + [插入排序](base/insert_sort.py)
+        + ##### [插入排序](base/insert_sort.py)
             + 思想：从无序区取出一个值，与有序区的值按从右向左的顺序比较，插入合适的位置，其右边的值都向右移动
             + 时间复杂度: O(n<sup>2</sup>)
 
     + #### 高效排序
-        + [快速排序](base/quick_sort.py)
+        + ##### [快速排序](base/quick_sort.py)
             + 思想：
                 + 取第一个元素`p`(任意一个元素，这里选了第一个)，使元素`p`归位
                 + 列表被`p`分为两部分，左边都比`p`小，右边都比`p`大
@@ -54,7 +55,7 @@
                 + 最坏情况，倒序列表的时间复杂度为 O(n<sup>2</sup>)
                     + 解决：将`p`随机取，极大降低最坏情况出现的概率
 
-        + [堆排序](base/heap_sort.py)
+        + ##### [堆排序](base/heap_sort.py)
             + 一些知识点：
                 + 树
                     + 一种数据结构，比如目录树
