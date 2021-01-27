@@ -62,3 +62,7 @@ def heap_sort(data):
     n = len(data)
 
     # 1. 创建堆
+    for i in range((n - 2) // 2, -1, -1):
+        # i表示创建堆的时候，调整的部分的根的下标
+        # 函数 sift中 high的作用是防止j超过边界，如果j不超过索引值为 n-1的high，就不会超过边界
+        sift(data, i, n - 1)
