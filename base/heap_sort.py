@@ -9,6 +9,7 @@
 ------------------------------------------
 堆排序
 """
+from random import shuffle
 
 
 def sift(data, low, high):
@@ -38,7 +39,7 @@ def sift(data, low, high):
             j = j + 1
 
         # 若子节点最大的值比较大，则将子节点的值放入父节点的位置
-        if data[i] > tmp:
+        if data[j] > tmp:
             data[i] = data[j]
 
             # 往下看一层
@@ -59,6 +60,7 @@ def heap_sort(data):
     """
         堆排序
     """
+    print(f"初始的乱序列表：{data}")
     n = len(data)
 
     # 1. 创建堆
@@ -66,3 +68,28 @@ def heap_sort(data):
         # i表示创建堆的时候，调整的部分的根的下标
         # 函数 sift中 high的作用是防止j超过边界，如果j不超过索引值为 n-1的high，就不会超过边界
         sift(data, i, n - 1)
+
+    # 堆创建完成
+    print(f"生成的堆：{data}")
+
+    for j in range(n - 1, -1, -1):
+        # 指向当前堆的最后一个元素
+        data[0], data[j] = data[j], data[0]
+
+        # j - 1 是新的 high
+        sift(data, 0, j - 1)
+
+    print(f"堆排序后的列表：{data}")
+
+
+def demo():
+    li = [i for i in range(100)]
+
+    # shuttle，随机排列列表
+    shuffle(li)
+
+    heap_sort(li)
+
+
+if __name__ == '__main__':
+    demo()
