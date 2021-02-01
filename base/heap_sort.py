@@ -9,6 +9,7 @@
 ------------------------------------------
 堆排序
 """
+import heapq
 from random import shuffle
 
 
@@ -18,6 +19,7 @@ def sift(data, low, high):
         data: list
         low:  堆的根节点位置
         high: 堆的最后一个元素的位置，防止由父节点找子节点时候越界
+        时间复杂度：O(logn)
     """
     # i 最开始指向根节点
     i = low
@@ -59,6 +61,7 @@ def sift(data, low, high):
 def heap_sort(data):
     """
         堆排序
+        时间复杂度：O(nlogn)
     """
     print(f"初始的乱序列表：{data}")
     n = len(data)
