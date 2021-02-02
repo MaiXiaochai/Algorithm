@@ -23,8 +23,8 @@
         + ##### 高效排序
             1. [快速排序](base/quick_sort.py)
             2. [堆排序](base/heap_sort.py)
-               + [` topk`问题](base/heap_sort.py)
-            3. 归并排序
+                + [` topk`问题](base/heap_sort.py)
+            3. [归并排序](base/merge_sort.py)
 
         + ##### 其它排序
             1. 希尔排序
@@ -148,6 +148,16 @@
                             + 如果小于堆顶，则忽略该元素
                             + 如果大于堆顶，则将堆顶更换为该元素，并且对堆进行一次调整
                         + 时间复杂度，O(nlogk)
+
+        + ##### [归并排序](base/merge_sort.py)
+            + 归并：将两段有序的的列表合成一个列表。称为一次归并
+                + ![img.png](pics/merge_sort.png)
+            + 归并排序
+                + 分解：将列表越分越小，直至分成一个元素
+                + 终止条件：一个元素是有序的
+                + 归并：将两个有序列表归并，列表越来越大
+                + ![归并排序流程图](https://bkimg.cdn.bcebos.com/pic/c8177f3e6709c93d673b9ed49d3df8dcd00054c3?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U5Mg==,g_7,xp_5,yp_5)
+
 3. ### 参考资料
 
 + [清华计算机博士带你学习`Python`算法`+`数据结构](https://www.bilibili.com/video/BV1mp4y1D7UP?from=search&seid=2163581747729103305)
