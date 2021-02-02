@@ -9,7 +9,7 @@
 ------------------------------------------
 堆排序
 """
-import heapq
+from heapq import heapify, heappop
 from random import shuffle
 
 
@@ -94,5 +94,20 @@ def demo():
     heap_sort(li)
 
 
+def demo2():
+    """
+        内置堆模块的使用
+    """
+    li = [i for i in range(100)]
+    shuffle(li)
+    heapify(li)
+
+    # heappop 每次弹出堆中最小的数
+    n = len(li)
+    for i in range(n):
+        print(heappop(li))
+
+
 if __name__ == '__main__':
-    demo()
+    # demo()
+    demo2()
